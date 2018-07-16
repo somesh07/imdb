@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+      <title>IMDb</title>
+      <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+          <link rel="stylesheet" href="style.css">
+          </head>
+          <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow p-3 mb-5">
+              <a class="navbar-brand" href="index.html">
+                <img src="./img/imbdpic.png" width="60" height="50" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <form id="searchForm" class="search-input-box">
+                  <input type="text" autocomplete="off" id = "searchmovie" class="form-control form-control-md" placeholder="Find Movies,TV shows,more...">
+                  </form>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Register</a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#signin" data-toggle="modal" data-target="#modal">login</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+                <div class="container-fluid mainbody" style="display: none">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-7 col-9 col-lg-6 leftside" id="showData">
+                      <img id="loading-image" src="img/loader.gif" style="display:none;"/>
+                      <ul id="result"></ul>
+                    </div>
+                    <div class="col-md-10  col-sm-10 col-12 col-lg-9 rightside">
+                      <img id="loading-image2" src="img/loader.gif" style="display:none;"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="a-spacing-small">
+Create your IMDb account
+      </h3>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-row">
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Last name">
+                                  </div>
+                                </div>
+                                <div class="form-row my-1">
+                                  <div class="col">
+                                    <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" class="form-control" autocomplete="off" placeholder="Password">
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <div class="col-auto my-1">
+                                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container">
+                          <div class="modal fade" id="modal">
+                            <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h3 class="a-spacing-small">
+      Sign in
+      </h3>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  <form>
+                                    <div class="form-row my-1">
+                                      <div class="col">
+                                        <input type="text" class="form-control" placeholder="Email">
+                                        </div>
+                                        <div class="col">
+                                          <input type="text" class="form-control" autocomplete="off" placeholder="Password">
+                                          </div>
+                                        </div>
+                                      </form>
+                                      <div class="col-auto my-1">
+                                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </body>
+                          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+                          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                          <script src="style.js"></script>
+                        </html>
