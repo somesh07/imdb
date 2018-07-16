@@ -18,7 +18,7 @@ $(document).ready(() => {
   getMoviesById = (id) =>{
    return new Promise((resolve,reject)=>{
       $("#loading-image2").css('display','block')
-        let requrl = `http://www.omdbapi.com/?apikey=14485a2d&i=${id}`;
+        let requrl = `https://www.omdbapi.com/?apikey=14485a2d&i=${id}`;
         $.ajax({
         url:requrl,
         type:'get',
@@ -43,7 +43,7 @@ let getMovies = (searchmovie) =>{
         type: 'GET',
         dataType: 'json',
         async: true,
-        url: 'http://www.omdbapi.com/?apikey=14485a2d&s=' +searchmovie ,
+        url: 'https://www.omdbapi.com/?apikey=14485a2d&s=' +searchmovie ,
         success: (response) => {
             $("#loading-image").css('display','none')
 
