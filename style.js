@@ -18,10 +18,9 @@ $(document).ready(() => {
   getMoviesById = (id) =>{
    return new Promise((resolve,reject)=>{
       $("#loading-image2").css('display','block')
-        let requrl = `https://www.omdbapi.com/?apikey=14485a2d&i=${id}`;
         $.ajax({
-        url:requrl,
-        type:'get',
+        url: 'https://www.omdbapi.com/?apikey=14485a2d&i=' +id,
+        type:'GET',
         async:true,
         success: function(res) {  
                resolve(res);
@@ -124,11 +123,7 @@ let getMovies = (searchmovie) =>{
             }
 
          },
-         error: (data) => { 
-
-            alert("some error occured")
-
-        },
+       
 
     });
 
