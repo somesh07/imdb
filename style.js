@@ -70,7 +70,7 @@ let getMovies = (searchmovie) =>{
 
                    getMoviesById(imbdId).then(mov=>{
 
-                    let detail_html = `<div class="well sponsor">
+                    let detail_html = `<div class="movie-Data">
                     <div class ="row">
                   
                       <div class="col">
@@ -98,6 +98,12 @@ let getMovies = (searchmovie) =>{
                             <li ><strong>DVD</strong> : ${mov.DVD}</li>
                             <li ><strong>Boxoffice</strong> : ${mov.BoxOffice}</li>
                             <li ><strong>Website</strong> :${mov.Website}</li>
+                            <li ><strong>Ratings-source</strong> :${mov.Ratings.map(function(rates){
+                              return  rates.Source 
+                            })}</li>
+                             <li ><strong>Ratings-value</strong> :${mov.Ratings.map(function(rates){
+                              return  rates.Value  
+                            })}</li>
 
                         </ul>
 
